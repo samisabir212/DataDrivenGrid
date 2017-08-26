@@ -60,37 +60,7 @@ public class TestBase {
 	public String browser;
 	
 	
-	
-	public void addLog(String message){
-		
-		
-		log.debug("Thread : "+getThreadValue(dr.get())+"  "+"Browser : "+browser+"  "+message);
-	}
-	
-	public static String screenshotPath;
-	public static String screenshotName;
 
-	public void captureScreenshot() {
-
-		File scrFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-
-		Date d = new Date();
-		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-
-		try {
-			FileUtils.copyFile(scrFile,
-					new File(System.getProperty("user.dir") + "\\reports\\" + screenshotName));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		
-		getExtTest().log(LogStatus.INFO,  " Screenshot -> "+ test.addScreenCapture(screenshotName));
-		
-	}
-	
-	
 	
 	public void setUp(){
 		
@@ -99,7 +69,7 @@ public class TestBase {
 			
 			
 			try {
-				fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\Config.properties");
+				fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/Config.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -114,7 +84,7 @@ public class TestBase {
 			
 			
 			try {
-				fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\OR.properties");
+				fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/OR.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -164,6 +134,7 @@ public class TestBase {
 		String[] newText2 = text2.split("-");
 		String reqText = newText2[newText2.length-1];
 		return reqText;
+
 	}
 	
 	
@@ -205,12 +176,15 @@ public class TestBase {
 		System.out.println("Thread value is : "+getThreadValue(dr.get()));
 	
 	}
+
+
 	
 	public void reportPass(String msg){
 		
 		getExtTest().log(LogStatus.PASS, msg);
 	}
-	
+
+
 	public void reportFailure(String msg){
 		
 		getExtTest().log(LogStatus.FAIL, msg);
@@ -302,10 +276,43 @@ public class TestBase {
 
 	}
 
-	
-	
-	
-	
-	
+
+
+	public void addLog(String message){
+
+
+		log.debug("Thread : "+getThreadValue(dr.get())+"  "+"Browser : "+browser+"  "+message);
+	}
+
+	public static String screenshotPath;
+	public static String screenshotName;
+
+	public void captureScreenshot() {
+
+		File scrFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+
+		Date d = new Date();
+		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
+
+		try {
+			FileUtils.copyFile(scrFile,
+					new File(System.getProperty("user.dir") + "\\reports\\" + screenshotName));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+		getExtTest().log(LogStatus.INFO,  " Screenshot -> "+ test.addScreenCapture(screenshotName));
+
+	}
+
+
+
+
+
+
+
+
 
 }
