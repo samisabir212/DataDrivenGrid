@@ -18,7 +18,9 @@ public class DataProviders {
 		return DataUtil.getData(testcase, excel);
 	
 	}
-	
+
+
+
 	@DataProvider(name="customerDP")
 	public static Object[][] getDataSuite2(Method m) {
 

@@ -21,11 +21,17 @@ public class AddCustomerTest extends TestBase {
 	public void addCustomerTest(Hashtable<String,String> data) throws MalformedURLException{
 	
 		super.setUp();
-		test = rep.startTest("Add Customer Test"+"   "+data.get("browser"));
+
+		test = rep.startTest("Add Customer Test"+"   " + data.get("browser"));
+
 		setExtentTest(test);
+
 		ExcelReader excel = new ExcelReader(Constants.SUITE1_XL_PATH);
+
 		DataUtil.checkExecution("BankManagerSuite", "AddCustomerTest", data.get("Runmode"), excel);
+
 		openBrowser(data.get("browser"));
+
 		navigate("testsiteurl");
 		
 		click("bmlBtn_CSS");

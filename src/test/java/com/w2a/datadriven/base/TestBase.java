@@ -42,8 +42,10 @@ public class TestBase {
 	 * db
 	 * mail
 	 * Extent Reports
-	 * 
-	 * 
+	 * Grid
+	 * Docker
+	 *
+	 *
 	 * 
 	 */
 	
@@ -61,7 +63,10 @@ public class TestBase {
 	
 	
 
-	
+	/*
+	* this initial set up is without a browser launch
+	* it is just loading the properites fi
+	* */
 	public void setUp(){
 		
 		
@@ -101,12 +106,19 @@ public class TestBase {
 		
 	}
 	
-	
+	/*
+	* this is getting the local thread webdriver driver of the thread remote driver  LOCAL driver
+	* */
 	public WebDriver getDriver(){
 		
 		return dr.get();
 	}
-	
+
+	/*
+	* setting the webdriver to the remote webdriver instance***
+	*
+	* the webdriver must be in par with the remotedriver... without the webdriver you cant initiate the remotewebdriver
+	* */
 	public void setWebDriver(RemoteWebDriver driver){
 		
 		dr.set(driver);
@@ -123,8 +135,46 @@ public class TestBase {
 		
 		return exTest.get();
 	}
-	
-	
+
+
+
+
+	public void openBrowser(String browser) throws MalformedURLException{
+
+		this.browser = browser;
+		DesiredCapabilities cap = null;
+
+		if(browser.equals("firefox")){
+
+			cap = DesiredCapabilities.firefox();
+			cap.setBrowserName("firefox");
+			cap.setPlatform(Platform.ANY);
+
+		}else if(browser.equals("chrome")){
+
+			cap = DesiredCapabilities.chrome();
+			cap.setBrowserName("chrome");
+			cap.setPlatform(Platform.ANY);
+
+		}else if(browser.equals("iexplore")){
+
+			cap = DesiredCapabilities.internetExplorer();
+			cap.setBrowserName("iexplore");
+			cap.setPlatform(Platform.WINDOWS);
+
+		}
+
+
+		driver = new RemoteWebDriver(new URL("http://192.168.1.175:4444/wd/hub"),cap);
+		setWebDriver(driver);
+		getDriver().manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicit.wait")), TimeUnit.SECONDS);
+		getDriver().manage().window().maximize();
+		getExtTest().log(LogStatus.INFO, "Browser openend successfully"+browser);
+
+		//System.out.println(dr.get());
+		System.out.println("Thread value is : "+getThreadValue(dr.get()));
+
+	}
 	
 	public String getThreadValue(Object value){
 		
@@ -137,45 +187,7 @@ public class TestBase {
 
 	}
 	
-	
-	public void openBrowser(String browser) throws MalformedURLException{
-		
-		this.browser = browser;
-		DesiredCapabilities cap=null;
-		
-		
-		
-		if(browser.equals("firefox")){
-			
-			cap = DesiredCapabilities.firefox();
-			cap.setBrowserName("firefox");
-			cap.setPlatform(Platform.ANY);
-			
-		}else if(browser.equals("chrome")){
-			
-			cap = DesiredCapabilities.chrome();
-			cap.setBrowserName("chrome");
-			cap.setPlatform(Platform.ANY);
-			
-		}else if(browser.equals("chrome")){
-			
-			cap = DesiredCapabilities.internetExplorer();
-			cap.setBrowserName("iexplore");
-			cap.setPlatform(Platform.WINDOWS);
-			
-		}
-		
-		
-		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),cap);
-		setWebDriver(driver);
-		getDriver().manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicit.wait")), TimeUnit.SECONDS);
-		getDriver().manage().window().maximize();
-		getExtTest().log(LogStatus.INFO, "Browser openend successfully"+browser);
-	
-		//System.out.println(dr.get());
-		System.out.println("Thread value is : "+getThreadValue(dr.get()));
-	
-	}
+
 
 
 	
@@ -191,11 +203,12 @@ public class TestBase {
 		captureScreenshot();
 		Assert.fail(msg);
 	}
-	
+
+
 	public void navigate(String url){
 		
 		getDriver().get(Config.getProperty(url));
-		getExtTest().log(LogStatus.INFO, "Navigating to "+Config.getProperty(url));
+		getExtTest().log(LogStatus.INFO, "Navigating to " + Config.getProperty(url));
 		
 	}
 	
@@ -212,6 +225,7 @@ public class TestBase {
 		}
 		
 		addLog("Clicking on an Element : "+locator);
+
 		}catch(Throwable t){
 			
 			reportFailure("Failing while clicking on an Element"+locator);
