@@ -3,10 +3,10 @@ package com.w2a.suite.bankmanager.testcases;
 import java.net.MalformedURLException;
 import java.util.Hashtable;
 
+import com.relevantcodes.extentreports.LogStatus;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
 import com.w2a.datadriven.base.TestBase;
 import com.w2a.utilities.Constants;
 import com.w2a.utilities.DataProviders;
@@ -22,7 +22,7 @@ public class AddCustomerTest extends TestBase {
 	
 		super.setUp();
 
-		test = rep.startTest("Add Customer Test"+"   " + data.get("browser"));
+		test = extentRep.startTest("Add Customer Test"+"   " + data.get("browser"));
 
 		setExtentTest(test);
 
@@ -35,6 +35,7 @@ public class AddCustomerTest extends TestBase {
 		navigate("testsiteurl");
 		
 		click("bmlBtn_CSS");
+		getExtTest().log(LogStatus.INFO,"bmlbutton clicked by css");
 		click("addCustBtn_CSS");
 		type("firstname_CSS",data.get("firstname"));
 		type("lastname_XPATH",data.get("lastname"));
@@ -42,15 +43,17 @@ public class AddCustomerTest extends TestBase {
 		click("addbtn_CSS");
 		
 		reportPass("Add customer test pass");
+
+
 	}
 	
 	@AfterMethod
 	public void tearDown(){
 		
-		if(rep!=null){
+		if(extentRep !=null){
 			
-			rep.endTest(getExtTest());
-			rep.flush();
+			extentRep.endTest(getExtTest());
+			extentRep.flush();
 		}
 		getDriver().quit();
 	}

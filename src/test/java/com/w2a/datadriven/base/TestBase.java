@@ -48,7 +48,7 @@ public class TestBase {
 	 *
 	 * 
 	 */
-	
+	/*   dr is the remote driver   not a regular webdriver */
 	public static ThreadLocal<RemoteWebDriver> dr = new ThreadLocal<RemoteWebDriver>();
 	public RemoteWebDriver driver=null;
 	public Properties OR = new Properties();
@@ -56,9 +56,14 @@ public class TestBase {
 	public FileInputStream fis;
 	public Logger log = Logger.getLogger("devpinoyLogger");
 	public WebDriverWait wait;
-	public ExtentReports rep = ExtentManager.getInstance();
+	public ExtentReports extentRep = ExtentManager.getInstance();
 	public ExtentTest test;
+
+	/*
+	* multithreaded extent report
+	* */
 	public static ThreadLocal<ExtentTest> exTest = new ThreadLocal<ExtentTest>();
+
 	public String browser;
 	
 	
@@ -68,11 +73,9 @@ public class TestBase {
 	* it is just loading the properites fi
 	* */
 	public void setUp(){
-		
-		
+
 		if(driver==null){
-			
-			
+
 			try {
 				fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/Config.properties");
 			} catch (FileNotFoundException e) {
@@ -85,9 +88,7 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
-			
+
 			try {
 				fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/OR.properties");
 			} catch (FileNotFoundException e) {
@@ -99,11 +100,9 @@ public class TestBase {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+
 			}
-			
 		}
-		
-		
 	}
 	
 	/*
@@ -132,7 +131,10 @@ public class TestBase {
 	
 	public ExtentTest getExtTest(){
 		
-		
+		/*
+		* exTest is the thread local extent report
+		* getting it to create multiple threads inorder to report on multiple nodes
+		* */
 		return exTest.get();
 	}
 
@@ -209,7 +211,10 @@ public class TestBase {
 		
 		getDriver().get(Config.getProperty(url));
 		getExtTest().log(LogStatus.INFO, "Navigating to " + Config.getProperty(url));
-		
+
+		/*
+		* the .log method only works when you ust the startTest Method
+		* */
 	}
 	
 	
@@ -310,7 +315,7 @@ public class TestBase {
 
 		try {
 			FileUtils.copyFile(scrFile,
-					new File(System.getProperty("user.dir") + "\\reports\\" + screenshotName));
+					new File(System.getProperty("user.dir") + "/reports/" + screenshotName));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

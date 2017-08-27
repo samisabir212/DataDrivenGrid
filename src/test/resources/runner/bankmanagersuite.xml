@@ -6,13 +6,12 @@
     <classes>
         <class name="com.w2a.suite.bankmanager.testcases.AddCustomerTest"/>
     </classes>
-  </test> <!-- Test -->
-  
+  </test>
+
     <test name="OpenAccountTest">
     <classes>
         <class name="com.w2a.suite.bankmanager.testcases.OpenAccountTest"/>
     </classes>
-  </test> <!-- Test -->
-  
+  </test>
 
-</suite> <!-- BankManagerSuite -->
+</suite>
