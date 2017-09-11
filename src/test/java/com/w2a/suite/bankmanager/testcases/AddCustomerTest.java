@@ -26,7 +26,7 @@ public class AddCustomerTest extends TestBase {
 
 		setExtentTest(test);
 
-		ExcelReader excel = new ExcelReader(Constants.SUITE1_XL_PATH);
+		ExcelReader excel = new ExcelReader(Constants.BankManagerSuite_XLPATH);
 
 		DataUtil.checkExecution("BankManagerSuite", "AddCustomerTest", data.get("Runmode"), excel);
 

@@ -65,8 +65,16 @@ public class TestBase {
 	public static ThreadLocal<ExtentTest> exTest = new ThreadLocal<ExtentTest>();
 
 	public String browser;
-	
-	
+
+	//this is your log4j logger for each thread
+	public void addLog(String message){
+
+
+		log.debug("Thread : "+getThreadValue(dr.get())+"  "+"Browser : "+browser+"  "+message);
+	}
+
+
+
 
 	/*
 	* this initial set up is without a browser launch
@@ -177,15 +185,20 @@ public class TestBase {
 		System.out.println("Thread value is : "+getThreadValue(dr.get()));
 
 	}
-	
+
+
+	/*
+	* getting the thread value of each browser
+	* like getting the ID of the threade
+	* */
 	public String getThreadValue(Object value){
 		
 		String text = value.toString();
-		String[] nextText = text.split(" ");
-		String text2 = nextText[nextText.length-1].replace("(", "").replace(")", "");
-		String[] newText2 = text2.split("-");
-		String reqText = newText2[newText2.length-1];
-		return reqText;
+		String[] newText = text.split(" ");
+		String text2 = newText[newText.length-1].replace("(", "").replace(")", "");
+		//String[] newText2 = text2.split("-");
+		//String reqText = newText2[newText2.length-1];
+		return text2;
 
 	}
 	
@@ -200,6 +213,10 @@ public class TestBase {
 
 
 	public void reportFailure(String msg){
+
+		/*
+		* passing the locator as the msg
+		* */
 		
 		getExtTest().log(LogStatus.FAIL, msg);
 		captureScreenshot();
@@ -219,6 +236,10 @@ public class TestBase {
 	
 	
 	public void click(String locator) {
+
+		/*
+		* using the try block to catch the failure and get the screen shot on failure
+		* */
 
 		try{
 		if (locator.endsWith("_CSS")) {
@@ -240,6 +261,10 @@ public class TestBase {
 
 	public void type(String locator, String value) {
 
+			/*
+		* using the try block to catch the failure and get the screen shot on failure
+		* */
+
 		try{
 		if (locator.endsWith("_CSS")) {
 			getDriver().findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
@@ -260,6 +285,11 @@ public class TestBase {
 	static WebElement dropdown;
 
 	public void select(String locator, String value) {
+
+			/*
+		* using the try block to catch the failure and get the screen shot on failure
+		* */
+
 
 		try{
 		if (locator.endsWith("_CSS")) {
@@ -297,11 +327,6 @@ public class TestBase {
 
 
 
-	public void addLog(String message){
-
-
-		log.debug("Thread : "+getThreadValue(dr.get())+"  "+"Browser : "+browser+"  "+message);
-	}
 
 	public static String screenshotPath;
 	public static String screenshotName;

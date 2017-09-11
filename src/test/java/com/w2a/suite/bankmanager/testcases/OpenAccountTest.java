@@ -24,7 +24,7 @@ public class OpenAccountTest extends TestBase {
 		setUp();
 		test = extentRep.startTest("Open Account Test"+"   "+data.get("browser"));
 		setExtentTest(test);
-		ExcelReader excel = new ExcelReader(Constants.SUITE1_XL_PATH);
+		ExcelReader excel = new ExcelReader(Constants.BankManagerSuite_XLPATH);
 		DataUtil.checkExecution("BankManagerSuite", "OpenAccountTest", data.get("Runmode"), excel);
 		openBrowser(data.get("browser"));
 		navigate("testsiteurl");
