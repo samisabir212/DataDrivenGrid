@@ -177,7 +177,7 @@ public class TestBase {
 
 		driver = new RemoteWebDriver(new URL("http://192.168.1.175:4444/wd/hub"),cap);
 		setWebDriver(driver);
-		getDriver().manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicit.wait")), TimeUnit.SECONDS);
+//		getDriver().manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicit.wait")), TimeUnit.SECONDS);
 		getDriver().manage().window().maximize();
 		getExtTest().log(LogStatus.INFO, "Browser openend successfully"+browser);
 
