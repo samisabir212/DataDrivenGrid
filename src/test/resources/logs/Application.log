@@ -1,0 +1,63 @@
+24/09/2017 12:34:26 devpinoyLogger Thread : 96acc558-1ad7-4cda-b9a4-93da8df69efb  Browser : chrome  wating on element : bmlBtn_XPATH
+24/09/2017 12:34:26 devpinoyLogger Thread : 96acc558-1ad7-4cda-b9a4-93da8df69efb  Browser : chrome  Clicking on an Element : bmlBtn_XPATH
+24/09/2017 12:34:27 devpinoyLogger Thread : 96acc558-1ad7-4cda-b9a4-93da8df69efb  Browser : chrome  wating on element : openaccount_XPATH
+24/09/2017 12:34:27 devpinoyLogger Thread : 96acc558-1ad7-4cda-b9a4-93da8df69efb  Browser : chrome  Clicking on an Element : openaccount_XPATH
+24/09/2017 12:34:28 devpinoyLogger Thread : 96acc558-1ad7-4cda-b9a4-93da8df69efb  Browser : chrome  wating on element : customer_XPATH
+24/09/2017 12:34:28 devpinoyLogger Thread : 96acc558-1ad7-4cda-b9a4-93da8df69efb  Browser : chrome  wating on element : currency_CSS
+24/09/2017 12:34:29 devpinoyLogger Thread : 96acc558-1ad7-4cda-b9a4-93da8df69efb  Browser : chrome  wating on element : 		click("process_XPATH");
+
+24/09/2017 12:34:29 devpinoyLogger Thread : 96acc558-1ad7-4cda-b9a4-93da8df69efb  Browser : chrome  Clicking on an Element : process_XPATH
+24/09/2017 12:34:29 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  wating on element : bmlBtn_XPATH
+24/09/2017 12:34:29 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  Clicking on an Element : bmlBtn_XPATH
+24/09/2017 12:34:30 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  wating on element : addCustBtn_XPATH
+24/09/2017 12:34:30 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  Clicking on an Element : addCustBtn_XPATH
+24/09/2017 12:34:31 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  wating on element : firstname_XPATH
+24/09/2017 12:34:31 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  Typing in an Element : firstname_XPATH
+24/09/2017 12:34:32 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  wating on element : lastname_XPATH
+24/09/2017 12:34:32 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  Typing in an Element : lastname_XPATH
+24/09/2017 12:34:32 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  wating on element : postcode_XPATH
+24/09/2017 12:34:32 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  Typing in an Element : postcode_XPATH
+24/09/2017 12:34:32 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  wating on element : addbtn_XPATH
+24/09/2017 12:34:33 devpinoyLogger Thread : 7233a0b9-446d-4d35-81aa-d9a06d4fa52f  Browser : firefox  Clicking on an Element : addbtn_XPATH
+24/09/2017 12:34:33 devpinoyLogger Thread : 6c786ac1-29c7-45cd-b640-47f33e499a77  Browser : chrome  wating on element : bmlBtn_XPATH
+24/09/2017 12:34:33 devpinoyLogger Thread : 6c786ac1-29c7-45cd-b640-47f33e499a77  Browser : chrome  Clicking on an Element : bmlBtn_XPATH
+24/09/2017 12:34:34 devpinoyLogger Thread : 6c786ac1-29c7-45cd-b640-47f33e499a77  Browser : chrome  wating on element : openaccount_XPATH
+24/09/2017 12:34:34 devpinoyLogger Thread : 6c786ac1-29c7-45cd-b640-47f33e499a77  Browser : chrome  Clicking on an Element : openaccount_XPATH
+24/09/2017 12:34:35 devpinoyLogger Thread : 6c786ac1-29c7-45cd-b640-47f33e499a77  Browser : chrome  wating on element : customer_XPATH
+24/09/2017 12:34:35 devpinoyLogger Thread : 6c786ac1-29c7-45cd-b640-47f33e499a77  Browser : chrome  wating on element : currency_CSS
+24/09/2017 12:34:36 devpinoyLogger Thread : 6c786ac1-29c7-45cd-b640-47f33e499a77  Browser : chrome  wating on element : 		click("process_XPATH");
+
+24/09/2017 12:34:36 devpinoyLogger Thread : 6c786ac1-29c7-45cd-b640-47f33e499a77  Browser : chrome  Clicking on an Element : process_XPATH
+24/09/2017 12:34:38 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  wating on element : bmlBtn_XPATH
+24/09/2017 12:34:39 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  Clicking on an Element : bmlBtn_XPATH
+24/09/2017 12:34:40 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  wating on element : bmlBtn_XPATH
+24/09/2017 12:34:40 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  Clicking on an Element : bmlBtn_XPATH
+24/09/2017 12:34:40 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  wating on element : addCustBtn_XPATH
+24/09/2017 12:34:41 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  Clicking on an Element : addCustBtn_XPATH
+24/09/2017 12:34:41 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  wating on element : addCustBtn_XPATH
+24/09/2017 12:34:41 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  Clicking on an Element : addCustBtn_XPATH
+24/09/2017 12:34:41 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  wating on element : firstname_XPATH
+24/09/2017 12:34:41 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  Typing in an Element : firstname_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  wating on element : lastname_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  Typing in an Element : lastname_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  wating on element : postcode_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  wating on element : firstname_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  Typing in an Element : firstname_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  Typing in an Element : postcode_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  wating on element : lastname_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  wating on element : addbtn_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  Typing in an Element : lastname_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  wating on element : postcode_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : e238b7cc-5a69-4e95-b918-ecba39d0c462  Browser : firefox  Clicking on an Element : addbtn_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  Typing in an Element : postcode_XPATH
+24/09/2017 12:34:42 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  wating on element : addbtn_XPATH
+24/09/2017 12:34:43 devpinoyLogger Thread : c65cfbae-9e7d-42a8-9155-1977ed8b749f  Browser : firefox  Clicking on an Element : addbtn_XPATH
+24/09/2017 12:34:47 devpinoyLogger Thread : 1f6dbf81-5710-4573-9ecf-1370e6cadd78  Browser : chrome  wating on element : bmlBtn_XPATH
+24/09/2017 12:34:47 devpinoyLogger Thread : 1f6dbf81-5710-4573-9ecf-1370e6cadd78  Browser : chrome  Clicking on an Element : bmlBtn_XPATH
+24/09/2017 12:34:48 devpinoyLogger Thread : 1f6dbf81-5710-4573-9ecf-1370e6cadd78  Browser : chrome  wating on element : openaccount_XPATH
+24/09/2017 12:34:48 devpinoyLogger Thread : 1f6dbf81-5710-4573-9ecf-1370e6cadd78  Browser : chrome  Clicking on an Element : openaccount_XPATH
+24/09/2017 12:34:49 devpinoyLogger Thread : 1f6dbf81-5710-4573-9ecf-1370e6cadd78  Browser : chrome  wating on element : customer_XPATH
+24/09/2017 12:34:49 devpinoyLogger Thread : 1f6dbf81-5710-4573-9ecf-1370e6cadd78  Browser : chrome  wating on element : currency_CSS
+24/09/2017 12:34:49 devpinoyLogger Thread : 1f6dbf81-5710-4573-9ecf-1370e6cadd78  Browser : chrome  wating on element : 		click("process_XPATH");
+
+24/09/2017 12:34:49 devpinoyLogger Thread : 1f6dbf81-5710-4573-9ecf-1370e6cadd78  Browser : chrome  Clicking on an Element : process_XPATH

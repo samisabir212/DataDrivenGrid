@@ -28,15 +28,26 @@ public class OpenAccountTest extends TestBase {
 		DataUtil.checkExecution("BankManagerSuite", "OpenAccountTest", data.get("Runmode"), excel);
 		openBrowser(data.get("browser"));
 		navigate("testsiteurl");
-		click("bmlBtn_CSS");
+
+		explicitWait(10,"bmlBtn_XPATH");
+		click("bmlBtn_XPATH");
 		getExtTest().log(LogStatus.INFO,"clicked to openaccount butten by css");
-		click("openaccount_CSS");
+
+		explicitWait(10,"openaccount_XPATH");
+		click("openaccount_XPATH");
+
+		explicitWait(10,"customer_XPATH");
 		select("customer_XPATH",data.get("customer"));
+
+		explicitWait(10,"currency_CSS");
 		select("currency_CSS",data.get("currency"));
+
+		explicitWait(10,"\t\tclick(\"process_XPATH\");\n");
 		click("process_XPATH");
+
 		reportPass("Open Account test pass");
 	}
-	
+
 	@AfterMethod
 	public void tearDown(){
 		

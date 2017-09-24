@@ -33,14 +33,27 @@ public class AddCustomerTest extends TestBase {
 		openBrowser(data.get("browser"));
 
 		navigate("testsiteurl");
-		
-		click("bmlBtn_CSS");
+
+		explicitWait(10,"bmlBtn_XPATH");
+		click("bmlBtn_XPATH");
+
 		getExtTest().log(LogStatus.INFO,"bmlbutton clicked by css");
-		click("addCustBtn_CSS");
-		type("firstname_CSS",data.get("firstname"));
+
+		explicitWait(10,"addCustBtn_XPATH");
+		click("addCustBtn_XPATH");
+
+		explicitWait(10,"firstname_XPATH");
+		type("firstname_XPATH",data.get("firstname"));
+
+		explicitWait(10,"lastname_XPATH");
 		type("lastname_XPATH",data.get("lastname"));
-		type("postcode_CSS",data.get("postcode"));
-		click("addbtn_CSS");
+
+		explicitWait(10,"postcode_XPATH");
+		type("postcode_XPATH",data.get("postcode"));
+
+
+		explicitWait(10,"addbtn_XPATH");
+		click("addbtn_XPATH");
 		
 		reportPass("Add customer test pass");
 

@@ -21,6 +21,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -175,6 +176,7 @@ public class TestBase {
 		}
 
 
+
 		driver = new RemoteWebDriver(new URL("http://192.168.1.175:4444/wd/hub"),cap);
 		setWebDriver(driver);
 //		getDriver().manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicit.wait")), TimeUnit.SECONDS);
@@ -233,8 +235,8 @@ public class TestBase {
 		* the .log method only works when you ust the startTest Method
 		* */
 	}
-	
-	
+
+
 	public void click(String locator) {
 
 		/*
@@ -353,10 +355,40 @@ public class TestBase {
 
 
 
+	public void explicitWait(int waitTime, String locator) {
+
+		WebDriverWait wait = new WebDriverWait(driver,waitTime);
+
+		WebElement element = null;
+
+		if (locator.endsWith("_CSS")) {
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty(locator))));
+		} else if (locator.endsWith("_XPATH")) {
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(OR.getProperty(locator))));
+		} else if (locator.endsWith("_ID")) {
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(OR.getProperty(locator))));
+		}
+
+		addLog("wating on element : "+locator);
+
+	}
 
 
 
 
+
+
+
+	// element = wait.until(ExpectedConditions.elementToBeClickable(By.id("someid")));
 
 
 }
+
+
+
+
+
+
+
+
+
