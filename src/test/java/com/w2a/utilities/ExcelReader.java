@@ -50,6 +50,7 @@ public class ExcelReader {
 	
 	// returns the row count in a sheet
 	public int getRowCount(String sheetName){
+
 		int index = workbook.getSheetIndex(sheetName);
 		if(index==-1)
 			return 0;
@@ -487,6 +488,8 @@ public class ExcelReader {
 
 		return true; 
 	}
+
+
 	public int getCellRowNum(String sheetName,String colName,String cellValue){
 		
 		for(int i=2;i<=getRowCount(sheetName);i++){

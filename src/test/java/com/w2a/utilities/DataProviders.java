@@ -17,6 +17,10 @@ public class DataProviders {
 	public static Object[][] getDataSuite1(Method m) {
 
 		System.out.println(m.getName());
+
+		/*
+		* just getting the excel path  and returning the testcase
+		* */
 		
 		ExcelReader excel = new ExcelReader(Constants.BankManagerSuite_XLPATH);
 		String testcase = m.getName();

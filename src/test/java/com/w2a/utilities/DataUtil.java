@@ -36,6 +36,8 @@ public class DataUtil {
 
 	public static boolean isSuiteRunnable(String suiteName) {
 
+
+
 		ExcelReader excel = new ExcelReader(Constants.SUITE_XL_PATH);
 		int rows = excel.getRowCount(Constants.SUITE_SHEET);
 
@@ -86,13 +88,18 @@ public class DataUtil {
 	@DataProvider
 	public static Object[][] getData(String testCase, ExcelReader excel) {
 
+
+
 		int rows = excel.getRowCount(Constants.DATA_SHEET);
+
+
 		System.out.println("Total rows are : " + rows);
 
 		String testName = testCase;
 
 		// Find the test case start row
 
+		//TESTCASE ROW!!
 		int testCaseRowNum = 1;
 
 		for (testCaseRowNum = 1; testCaseRowNum <= rows; testCaseRowNum++) {
@@ -107,6 +114,7 @@ public class DataUtil {
 		System.out.println("Test case starts from row num: " + testCaseRowNum);
 
 		// Checking total rows in test case
+		//TOTAL ROWS IN THE TESTCASE  TOTAL ROWS OF DATA!!!
 
 		int dataStartRowNum = testCaseRowNum + 2;
 
